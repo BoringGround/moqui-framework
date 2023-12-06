@@ -39,3 +39,20 @@ Get started with Moqui development quickly using the Tutorial at:
 For comprehensive documentation of Moqui Framework see the wiki based documentation on moqui.org (*running on Moqui HiveMind*):
  
 <https://www.moqui.org/m/docs/framework>
+
+## MarbleERP
+Here are command line steps for initial checkout, setup, and run:
+```
+$ git clone git@github.com:moqui/moqui-framework.git moqui
+$ cd moqui
+$ ./gradlew getComponent -Pcomponent=MarbleERP
+$ ./gradlew load
+$ java -jar moqui.war
+```
+Here are steps for a basic update (for development with clean out and rebuild of database):
+```
+$ cd moqui
+$ ./gradlew cleanAll gitPullAll
+$ ./gradlew load
+$ java -jar moqui.war
+```
